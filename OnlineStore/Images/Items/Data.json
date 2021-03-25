@@ -1,0 +1,53 @@
+﻿{
+  "Books": [
+    {
+      "Author": "Ibrahim Muhammed Heshaam Jaaber",
+      "Image": "ByThePen.jpg",
+      "Name_AR": "بالقلم",
+      "Name_EN": "By The Pen",
+      "Price": 0
+    },
+    {
+      "Author": "Dr. Abu Ameenah Bilal Philips",
+      "Image": "IslamicStudies.jpg",
+      "Name_AR": "دراسات اسلامية",
+      "Name_EN": "Islamic Studies",
+      "Price": 0
+    },
+    {
+      "Author": "Ahmed Zamzami",
+      "Image": "BadConsequencesOfTheTonge.jpg",
+      "Name_AR": "",
+      "Name_EN": "The Bad Consequences of the Tongue",
+      "Price": 0
+    },
+    {
+      "Author": "Shaykh Muhammad Bin Salih",
+      "Image": "Sittings Of Ramadan.jpg",
+      "Name_AR": "مجالس شهر رمضان",
+      "Name_EN": "Sittings of Ramadan",
+      "Price": 0
+    },
+    {
+      "Author": "Ibraahim ibn Saaleh al-Mahmud",
+      "Image": "Winning the Heart of Your Husband.jpg",
+      "Name_AR": "",
+      "Name_EN": "Winning The Heart of Your Husband",
+      "Price": 0
+    },
+    {
+      "Author": "ابى زكريا محى الدين",
+      "Image": "Ryad Al Salhen.jpg",
+      "Name_AR": "شرح رياض الصالحين",
+      "Name_EN": "Ryad Al Salhen",
+      "Price": 0
+    },
+    {
+      "Author": "Dr. Muhammad Taqi-ud-Din",
+      "Image": "Interpretation of The Meanings of The Noble Quraan.jpg",
+      "Name_AR": "تفسير معانى القرأن الكريم بألغة الانجليزية",
+      "Name_EN": "Interpretation of The Meanings of The Noble Quraan",
+      "Price": 0
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Template.master.cs" Inherits="OnlineStore.Forms.Template" %>
+
+<!DOCTYPE html>
+<html>
+
+<head runat ="server">
+    <title><%: Page.Title %></title>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        ul.header {
+            width: 100%;
+            height:46px;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+
+            top: 0px;
+            position: sticky;
+            z-index:1;
+            overflow: visible;
+        }
+
+            ul.header li {
+                float: left;
+                height:100%;
+                width:15%;
+            }
+
+                ul.header li a {
+                    display: inline-block;
+                    color: white;
+                    text-align: center;
+                    
+                    text-decoration: none;
+
+                    line-height:45px;
+                    height:100%;
+                    width:100%;
+                }
+
+                    ul.header li a:hover {
+                        background-color: red;
+                    }
+
+            ul.header .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+
+                width:15%;
+                min-width: 145px;
+
+                box-shadow: 5px 10px 16px black;
+            }
+
+                ul.header .dropdown-content a {
+                    color: black;
+                    text-decoration: none;
+                    /*display: block;*/
+
+                    text-align: left;
+                    padding-top:1%;
+                    padding-bottom:1%;
+
+                    width:95%;
+                    padding-left:5%;
+                }
+
+                    ul.header .dropdown-content a:hover {
+                        background-color: #f1f1f1;
+                    }
+            .dropdown-content2 {
+                float:right;
+                display: none;
+                position: relative;
+                right:45px;
+                margin-top:0px;
+
+                width:10%;
+                min-width: 50px;
+                text-align: center;
+                background-color: #f9f9f9;
+                box-shadow: 5px 10px 16px black;
+            }
+                ul.header .dropdown-content2 a {
+                    float:right;
+                    color: black;
+                    text-decoration: none;
+                    /*display: block;*/
+
+                    text-align: center;
+                    padding-top:1%;
+                    padding-bottom:1%;
+
+                    width:95%;
+                    padding-left:5%;
+                }
+
+                    ul.header .dropdown-content2 a:hover {
+                        background-color: #f1f1f1;
+                    }
+
+            ul.header .ddli:hover .dropdown-content {
+                display: block;
+                position:absolute;
+            }
+            ul.header .ddli2:hover .dropdown-content2 {
+                display: block;
+                position:absolute;
+            }
+
+        @media screen and (max-width: 300px) {
+            ul li {
+                float: none;
+            }
+        }
+        ul.footer {
+            width: 100%;
+            height:46px;
+            list-style-type: none;
+            background-color: #333;
+
+            position: page;
+            margin: 0;
+            padding: 0;
+        }
+            ul.footer li{
+                float:left;
+                width:50%;
+                height:100%;
+            }
+            ul.footer a {
+                color: white;
+                text-decoration: none;
+                display:inline-block;
+                text-align: center;
+                width:100%;
+                height:100%;
+                
+                line-height:300%;
+
+            }
+                ul.footer a:hover {
+                    background-color: red;
+                }
+
+            img{
+
+            }
+    </style>
+</head>
+<body>
+    <form runat="server">
+        <h1 style="text-align:center;">Bookle</h1>
+
+        <ul class="header">
+            <li><a href="/Bookle/Home.aspx">Home</a></li>
+
+            <li class="ddli">
+                <a href="javascript:void(0)">Genres &raquo;</a>
+                <div class="dropdown-content">
+                    <a href="#">Fiction</a>
+                    <a href="#">Novel</a>
+                    <a href="#">Science Fiction</a>
+                </div>
+                
+            </li>
+            
+            <li style="float: right; width:45px; ">
+                <a href="/Bookle/Forms/cart.aspx">
+                    <img style="height:90%; width:90%; padding-top:3px;" src="/Bookle/Images/cart.png" />
+                </a>
+            </li>
+
+            <li class="ddli2" style="float: right; width:45px;">
+                <a href="javascript:void(0)"><img style="height:90%; width:90%; padding-top:3px" src="/Bookle/Images/user.png" /></a>
+
+                <div class="dropdown-content2">
+                    <asp:linkbutton runat="server" ID="Link1" PostBackUrl="~/Forms/Login.aspx">Login</asp:linkbutton>
+                    <asp:linkbutton runat="server" ID="Link2" PostBackUrl="~/Forms/Register.aspx">Register</asp:linkbutton>
+                    <asp:linkbutton runat="server" ID="Link3" OnClick="login_Click">Logout</asp:linkbutton>
+                </div>
+
+            </li>
+        </ul>
+
+        <div style="padding: 20px; margin: 30px; background-color: cornflowerblue;"><asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server"></asp:ContentPlaceHolder></div>
+
+        <ul class="footer">
+            <li><a href="/Bookle/Forms/About.aspx">About</a></li>
+            <li><a href="mailto: CS@Bookle.com">Contact Us</a></li>
+        </ul>
+
+    </form>
+</body>
+</html>
